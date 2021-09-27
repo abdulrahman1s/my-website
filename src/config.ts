@@ -10,9 +10,8 @@ export default {
     kofi: "https://ko-fi.com/themaestroo",
     reddit: "https://reddit.com/u/TheMaestr00",
   },
-  defaultTheme: "light",
   embed: {
-    title: "TheMaestro's Website",
+    title: "TheMaestro's website",
     description: "Hi, welcome to my personal site",
     color: "#ffffff",
   },
