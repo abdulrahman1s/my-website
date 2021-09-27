@@ -1,0 +1,16 @@
+---
+import '@styles/Projects.css'
+import BaseLayout from '@layouts/Base.astro'
+import Project from '@layouts/Project.astro'
+import { parseProject } from '../utils/utils'
+
+const projects = Astro.fetchContent('../projects/*.md').map(parseProject)
+---
+
+<BaseLayout title="Projects" className="projects">
+
+{projects.map((p) => (
+    <Project title={p.name} description={p.description} url={p.url} />
+))}
+
+</BaseLayout>

@@ -1,0 +1,14 @@
+footer {    
+    margin-top: 12rem;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .copyright {
+        color: var(--text-color-light);
+        font-size: 14px;
+    }
+}

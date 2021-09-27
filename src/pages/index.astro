@@ -1,0 +1,16 @@
+---
+import '@styles/Home.css'
+import BaseLayout from '@layouts/Base.astro'
+import config from '../config.ts'
+---
+
+<BaseLayout title="Home" className="home">
+   <h1 class="title">Hello there!</h1>
+   <p class="description">{config.description}</p>
+   <img class="avatar" src="/avatar.png" alt="My profile picture" draggable="false" />
+   <div class="buttons">
+      <a class="button" href="/projects">Projects</a>
+      <a class="button" href="/posts">Posts</a>
+      <a class="button" href={config.email}>Email</a>
+   </div>
+</BaseLayout>

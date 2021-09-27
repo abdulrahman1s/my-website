@@ -1,0 +1,63 @@
+---
+import '@styles/globals.css'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import config from '../config.ts'
+
+const { title, className } = Astro.props
+---
+
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+   <meta name="viewport" content="width=device-width" />
+   <title>{config.name} | {title}</title>
+   <meta name="robots" content="index,follow" />
+   <meta property="og:title" content={config.embed.title} />
+   <meta property="og:type" content="article" />
+   <meta property="og:description" content={config.embed.description} />
+   <meta name="theme-color" content={config.embed.color} />
+</head>
+
+<body>
+  <script type="text/javascript" src="https://unpkg.com/external-svg-loader@1.0.0/svg-loader.min.js" async></script>
+   <Header />
+   <div class={className}>
+      <div class="container"><slot /></div>
+   </div>
+   <Footer />
+   <div id="theme-toggle">
+      <svg data-src="/icons/moon.svg" height="24px"></svg>
+   </div>
+   <script>
+      function setTheme(mode) {
+         const style = document.documentElement.style
+         
+         if (mode === 'light') {
+            style.setProperty('--background', 'white');
+            style.setProperty('--text-color', '#111827');
+            style.setProperty('--text-color-light', '#808080');
+            style.setProperty('--shadow-color', 'hsla(0, 0%, 0%, 0.2)')
+         }
+         
+         if (mode === 'dark') {
+            style.setProperty('--text-color', 'white')
+            style.setProperty('--background', 'black')
+            style.setProperty('--shadow-color', 'hsla(0, 0%, 100%, 0.068)')
+         }
+      }
+      
+      setTheme((localStorage.getItem('theme') || config.defaultTheme))
+      
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+         const currentTheme = localStorage.getItem('theme') || 'light'
+         const theme = currentTheme === 'dark' ? 'light' : 'dark'
+         setTheme(theme)
+         localStorage.setItem('theme', theme)
+      })
+   </script>
+</body>
+
+</html>

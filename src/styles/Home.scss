@@ -1,0 +1,50 @@
+.home {
+  margin: calc(25% / 2) 0;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .description {
+    display: inline-block;
+    max-width: 500px;
+  }
+
+  .buttons {
+    display: flex;
+    margin-top: 4rem;
+    max-width: 13rem;
+
+    .button {
+      display: grid;
+      place-items: center;
+      padding: 0.2rem 1rem;
+      margin: 0 0.4rem;
+
+      border-radius: 1rem;
+      border: solid 0.02rem;
+
+      transition: color, background 300ms;
+      color: var(--text-color);
+      background: var(--background);
+
+      &:hover {
+        color: var(--background);
+        background: var(--text-color);
+      }
+    }
+  }
+
+  .avatar {
+    display: none;
+    margin-top: -3rem;
+    border-radius: 999px;
+    max-width: 200px;
+    float: right;
+    box-shadow: 0 0 30px 10px var(--shadow-color);
+    
+    @media (min-width: 770px) {
+      display: block;
+    }
+  }
+}

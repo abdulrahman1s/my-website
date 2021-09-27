@@ -1,0 +1,19 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "author": {
+    "name": "TheMaestro",
+    "email": "contact@themaestro.site"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "astro": "^0.20.7"
+  }
+}

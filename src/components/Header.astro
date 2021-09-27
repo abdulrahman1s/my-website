@@ -1,0 +1,34 @@
+---
+import '@styles/Header.css'
+import config from '../config'
+const links = config.links
+---
+
+<header>
+  <div class="container">
+    <a href="/" class="logo">TheMaestro</a>
+    <nav>
+      <div class="dropdown">
+        <svg class="button" data-src="/icons/menu-bar.svg" height="30px"></svg>
+        <ul class="menu">
+          <li><a href={links.github} target="_blank">Github</a></li>
+          <li><a href={links.twitter} target="_blank">Twitter</a></li>
+          <li><a href={links.reddit} target="_blank">Reddit</a></li>
+          <li><a href={links.kofi} target="_blank">Ko-fi</a></li>
+        </ul>
+      </div>
+      <a href={links.kofi} class="ko-fi">
+        <svg data-src="/icons/ko-fi.svg" height="30px"></svg>
+      </a>
+      <a href={links.twitter} class="twitter">
+        <svg data-src="/icons/twitter.svg" height="30px"></svg>
+      </a>
+      <a href={links.reddit} class="reddit">
+        <svg data-src="/icons/reddit.svg" height="30px"></svg>
+      </a>
+      <a href={links.github}>
+        <svg data-src="/icons/github.svg" height="30px"></svg>
+      </a>
+      </nav>
+  </div>
+</header>

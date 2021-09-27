@@ -1,0 +1,102 @@
+@use "sass:map";
+
+$icon-colors: (
+  "twitter": #1da1f2,
+  "reddit": #ff4500,
+  "ko-fi": #ff5e5b,
+  "default": #0ea5e9,
+);
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 99;
+  background: var(--background);
+  padding: 0.8rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+
+  nav {
+    svg {
+      margin: 0 0.4rem;
+      width: 30px;
+      transition: color 0.2s;
+      &:hover {
+        color: map.get($icon-colors, "default");
+      }
+    }
+
+    .ko-fi:hover {
+      svg {
+        color: map.get($icon-colors, "ko-fi");
+      }
+    }
+
+    .twitter:hover {
+      svg {
+        color: map.get($icon-colors, "twitter");
+      }
+    }
+
+    .reddit:hover {
+      svg {
+        color: map.get($icon-colors, "reddit");
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+
+    .button {
+      display: none;
+      cursor: pointer;
+      width: 30px;
+      color: var(--text-color);
+      &:hover {
+        color: map.get($icon-colors, "default");
+      }
+    }
+
+    & > .button:focus + .menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .menu {
+      position: absolute;
+      top: 2.2rem;
+      right: 0.8rem;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .dropdown .button {
+      display: initial;
+    }
+
+    nav svg {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+---
+import '@styles/Projects.css'
+
+const { title, description, url } = Astro.props
+---
+
+
+<a class="card" href={url} target="_blank">
+    <h2 class="title">{title}</h2>
+    <p class="description">{description}</p>
+</a>
