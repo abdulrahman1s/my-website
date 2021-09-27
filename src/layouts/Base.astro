@@ -34,18 +34,21 @@ const { title, className } = Astro.props
    <script>
       function setTheme(mode) {
          const style = document.documentElement.style
-         
+         const icon = document.getElementById('theme-toggle')
+
          if (mode === 'light') {
             style.setProperty('--background', 'white');
             style.setProperty('--text-color', '#111827');
             style.setProperty('--text-color-light', '#808080');
             style.setProperty('--shadow-color', 'hsla(0, 0%, 0%, 0.2)')
+            icon.innerHTML = '<svg data-src="/icons/moon.svg" height="24px"></svg>'
          }
          
          if (mode === 'dark') {
             style.setProperty('--text-color', 'white')
             style.setProperty('--background', 'black')
             style.setProperty('--shadow-color', 'hsla(0, 0%, 100%, 0.068)')
+            icon.innerHTML = '<svg data-src="/icons/sun.svg" height="24px"></svg>'
          }
       }
       
