@@ -4,6 +4,7 @@ $icon-colors: (
   "twitter": #1da1f2,
   "reddit": #ff4500,
   "ko-fi": #ff5e5b,
+  "discord": #5865f2,
   "default": #0ea5e9,
 );
 
@@ -38,22 +39,20 @@ header {
       }
     }
 
-    .ko-fi:hover {
-      svg {
-        color: map.get($icon-colors, "ko-fi");
-      }
+    .ko-fi:hover svg {
+      color: map.get($icon-colors, "ko-fi");
     }
 
-    .twitter:hover {
-      svg {
-        color: map.get($icon-colors, "twitter");
-      }
+    .twitter:hover svg {
+      color: map.get($icon-colors, "twitter");
     }
 
-    .reddit:hover {
-      svg {
-        color: map.get($icon-colors, "reddit");
-      }
+    .discord:hover svg {
+      color: map.get($icon-colors, "discord");
+    }
+
+    .reddit:hover svg {
+      color: map.get($icon-colors, "reddit");
     }
   }
 

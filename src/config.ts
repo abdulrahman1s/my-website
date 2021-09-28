@@ -9,6 +9,7 @@ export default {
     twitter: "https://twitter.com/_TheMaestroo_",
     kofi: "https://ko-fi.com/themaestroo",
     reddit: "https://reddit.com/u/TheMaestr00",
+    discord: "https://discord.gg/nNHH5apCwr"
   },
   embed: {
     title: "TheMaestro's website",
