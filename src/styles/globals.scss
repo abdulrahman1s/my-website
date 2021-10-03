@@ -3,7 +3,7 @@
 :root {
   --max-width: 1450px;
   --background: white;
-  --text-color: #111827;
+  --text-color: black;
   --text-color-light: #808080;
   --shadow-color: rgb(69 69 69 / 50%);
 }
@@ -18,12 +18,20 @@ svg {
   user-select: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100vh;
   margin: 0;
   background-color: var(--background);
   color: var(--text-color);
   font-family: "Inter", "system-ui", sans-serif;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a {
@@ -77,9 +85,9 @@ ul {
   height: 50px;
   display: grid;
   place-items: center;
-  transition: 1s;
+  transition: transform .7s;
 
-  &:hover {
+  &:active {
     transform: rotate(360deg);
   }
 
