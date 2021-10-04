@@ -5,10 +5,10 @@ export default {
     Also I hate python owo`,
   email: "mailto:contact@themaestro.site",
   links: {
-    github: "https://github.com/TheMaestro0",
-    twitter: "https://twitter.com/_TheMaestroo_",
-    kofi: "https://ko-fi.com/themaestroo",
-    reddit: "https://reddit.com/u/TheMaestr00",
+    github: "https://github.com/TheMaestro1s",
+    twitter: "https://twitter.com/TheMaestro1s",
+    kofi: "https://ko-fi.com/themaestro",
+    reddit: "https://reddit.com/u/TheMaestro1s",
     discord: "https://discord.gg/nNHH5apCwr"
   },
   embed: {
