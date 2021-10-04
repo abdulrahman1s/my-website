@@ -7,7 +7,7 @@ export default {
   links: {
     github: "https://github.com/TheMaestro0",
     twitter: "https://twitter.com/_TheMaestroo_",
-    kofi: "https://ko-fi.com/themaestroo",
+    kofi: "https://ko-fi.com/themaestro",
     reddit: "https://reddit.com/u/TheMaestr00",
     discord: "https://discord.gg/nNHH5apCwr"
   },
